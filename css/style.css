@@ -1,0 +1,131 @@
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Parisienne&display=swap');
+
+
+*{margin: 0; padding: 0;
+}
+
+header{background-color:rgb(233, 169, 208); height: 75px;}
+nav{background-color: #A0C4FF;font-family: 'Amatic SC';}
+main{background-color:#7cffcb; background-image: linear-gradient( 68.4deg,  rgba(248,182,204,1) 0.5%, rgba(192,198,230,1) 49%, rgba(225,246,240,1) 99.8% );}
+body{background-color:#7cffcb; background-image: linear-gradient( 68.4deg,  rgba(248,182,204,1) 0.5%, rgba(192,198,230,1) 49%, rgba(225,246,240,1) 99.8% );}
+
+footer{background-color: #BDB2FF;}
+h2{color:white;}
+h3{color: white;}
+.lista{list-style: square;}
+ol{list-style: none;}
+ul{list-style: none;}
+
+
+.listasxdefinicion{color:purple;}
+.formulario{color: darkblue;} 
+a{text-decoration: none ;}
+.sectionCumpleanos{background-color: #CAFFBF;}
+.sectionEventos{background-color: #A0C4FF;}
+.sectionRegala {background-color: #BDB2FF;}
+
+.fontregular {font-style:normal;}
+.fontcursiva {font-style: italic;}
+.fontnegrita {font-weight: bold;}
+.textogrande {font-size: 38px; font-family:'Amatic SC';font-weight: 700;text-shadow: 1px 1px 2px black;color: white;}
+.fontimpact {font-family: Impact, sans-serif;}
+.centrar {text-align: center;}
+.interlineado {line-height: 2;}
+.textosubrayado {text-decoration: underline;}
+.fondonosotros{background-image: url(../images/fondonosotros.jpg);background-position: center; background-repeat: no-repeat;background-size:cover;}
+.fondotorta {background-image: url(../images/torta1.webp);background-position: center; background-repeat: no-repeat;background-size: cover;}
+.fontlogo{font-family: 'Parisienne'; font-size: 60px; text-align: center; font-weight: 800; color: white; text-shadow: 1px 1px 2px black;}
+.fontlogopie{font-family: 'Parisienne'; font-size: 30px; text-align: center; font-weight: 800; color: white; text-shadow: 1px 1px 2px black;}
+.fontamatic{font-family:'Amatic SC'; font-size: 20px; text-align: center; line-height: 2;font-weight: 700;color: white;text-shadow: 1px 1px 2px black;}
+.bodyProductos{background-color:#A0C4FF; width: 100%;height: 100vh;}
+.fondocontacto{background-image: url(../images/fondo1.webp);background-repeat: no-repeat;background-size: cover;background-position: center;}
+
+
+.divmargencomprar{ background-color:#BDB2FF;
+    width:75%;
+    height: 50vh;
+    margin: 20px 100px;
+    padding: 40px;
+    border: dashed 10px #fa7979;
+    
+}
+
+.imagresponsive{ width: 100%;}
+.textoresponsive { height: 100%;}
+.ulmenu{list-style: none; height: 30px;font-size: 0px; padding: 10px;}
+.limenu{display: inline-block; width: 20%;position:relative; font-size: 25px; font-family:'Amatic SC' ;}
+.ul-ul {position: absolute; display: none;}
+.ul-ul-li{display: block;}
+.ul-li:hover ul{display: block;}
+.piedepag{font-size: 18px; font-family:'Amatic SC' ;}
+
+/*.estilos con flexbox.*/
+.padre_flex{display: flex;
+flex-direction: row;
+justify-content:space-around;
+align-items:center;
+}
+
+.flexpiedepagina{display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    
+}
+
+
+.divmargenprincipal{background-color: #4158D0;
+background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+
+
+    width: 800px;
+    height: 100vh;
+    margin: 30px;
+    }
+    .trans{transition: all 2s;}
+    .trans:hover {width: 810px; height: 810px; border: solid 5px white;}
+    .animatitulo{
+        animation-name: titulo;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+    @keyframes titulo{ from{opacity: 0; transform:translateX(-900px);}
+to{opacity: 100; transform: translateX(0px);}
+}
+    
+    /*.estilos con grid.*/
+    .sectionproductos{background-color: turquoise;}
+    .border{border: solid 5px violet;
+    }
+    .gridproductos{display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 100px auto auto auto auto;
+ }
+
+ /*.grilla.*/
+ .fondoimagen{background-image: url(/images/vinieta.png); background-repeat: no-repeat;}
+ .mainprodutos{height: 100vh;}
+ .grilla{display: grid;
+grid-template-areas:
+"productos productos"
+"tortas imagenes"
+"cumples imagenes"
+"eventos imagenes"
+"tartas imagenes";
+grid-template-columns: 3fr 2fr;
+grid-template-rows: 100px auto auto auto auto;
+grid-column-gap: 10px;
+grid-row-gap: 10px;
+justify-content: space-evenly;
+align-self: center;
+
+}
+.headerproductos{ grid-area: productos;
+}
+.gridtortas{grid-area: tortas;
+}
+.gridcumples{grid-area: cumples;
+}
+.grideventos{grid-area: tartas;
+}
+.gridimagenes{grid-area: imagenes;
+}
